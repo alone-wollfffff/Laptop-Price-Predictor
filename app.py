@@ -4,8 +4,11 @@ import numpy as np
 import pandas as pd
 
 # 1. Page Config
-st.set_page_config(page_title="Laptop Price Predictor", layout="centered")
-
+st.set_page_config(
+    page_title="Laptop Price Predictor",
+    page_icon="💻",
+    layout="centered"
+)
 # 2. Animated Background CSS
 st.markdown("""
     <style>
@@ -165,4 +168,5 @@ elif st.session_state.step == 6:
     st.header(f"₹{st.session_state.prediction:,}")
     if st.button("🔄 Restart Prediction"):
         st.session_state.step = 0
+
         st.rerun()
